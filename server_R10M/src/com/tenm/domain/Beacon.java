@@ -2,10 +2,11 @@ package com.tenm.domain;
 
 public class Beacon {
 	
-	private String regionName;
 	private String uuid;
 	private int major;
 	private int minor;
+	private String regionName;
+	private String regionDetail;
 	
 	//constructor
 	public Beacon(){
@@ -18,12 +19,6 @@ public class Beacon {
 
 	//getter & setter
 	
-	public String getRegionName() {
-		return regionName;
-	}
-	public void setRegionName(String regionName) {
-		this.regionName = regionName;
-	}
 	public String getUuid() {
 		return uuid;
 	}
@@ -42,10 +37,25 @@ public class Beacon {
 	public void setMinor(int minor) {
 		this.minor = minor;
 	}
+	public String getRegionName() {
+		return regionName;
+	}
+	public void setRegionName(String regionName) {
+		this.regionName = regionName;
+	}
+	public String getRegionDetail() {
+		return regionDetail;
+	}
+	public void setRegionDetail(String regionDetail) {
+		this.regionDetail = regionDetail;
+	}
 	@Override
 	public String toString() {
-		return "Beacon [regionName=" + regionName + ", uuid=" + uuid
-				+ ", major=" + major + ", minor=" + minor + "]";
+		return "Beacon [uuid=" + uuid + ", major=" + major + ", minor=" + minor
+				+ ", regionName=" + regionName + ", regionDetail="
+				+ regionDetail + "]";
 	}
+	
+	
 	
 }
