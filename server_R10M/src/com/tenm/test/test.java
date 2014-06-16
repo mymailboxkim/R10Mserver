@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.tenm.domain.Beacon;
 import com.tenm.domain.LocationInfo;
 import com.tenm.service.TourDao;
 import com.tenm.service.TourService;
@@ -26,6 +27,25 @@ public class test {
 	@Autowired
 	@Qualifier("tourDaoImpl")
 	private TourDao tourDao;
+	
+	@Test
+	public void testGetBeaconInfoService() throws Exception{
+		Beacon beacon = new Beacon();
+		beacon.setUuid("8492e75f-4fd6-469d-b132-043-fe94921d8");
+		beacon.setMajor(11305);
+		beacon.setMinor(19481);
+		System.out.println(tourService.getBeaconDataKr(beacon));
+		System.out.println(tourService.getBeaconDataEng(beacon));
+	}
+	
+	//@Test
+	public void testGetBeaconInfoDao() throws Exception{
+		Beacon beacon = new Beacon();
+		beacon.setUuid("8492e75f-4fd6-469d-b132-043-fe94921d8");
+		beacon.setMajor(11305);
+		beacon.setMinor(19481);
+		System.out.println(tourDao.getBeaconRegion(beacon));
+	}
 	
 	/*
 	@Value("#{dataProperties}") Map map;	//data.properties 파일의 모든값을 Map으로 저장

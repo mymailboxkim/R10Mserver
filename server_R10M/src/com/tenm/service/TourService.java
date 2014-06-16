@@ -16,6 +16,8 @@ public interface TourService {
 	
 	public String getStremingUrl(String locationName);
 	
-	public LocationInfo getBeaconRegion(Beacon beacon);
+	public Beacon getBeaconDataKr(Beacon beacon);
+	
+	public Beacon getBeaconDataEng(Beacon beacon);
 
 }

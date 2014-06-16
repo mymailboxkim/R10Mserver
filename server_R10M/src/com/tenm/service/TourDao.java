@@ -12,6 +12,6 @@ public interface TourDao {
 	
 	public Map<String, LocationInfo> getLocationDataMap(String areaName);
 	
-	public LocationInfo getBeaconRegion(Beacon beacon);
+	public Beacon getBeaconRegion(Beacon beacon);
 	
 }

@@ -12,7 +12,6 @@
 	
 	<typeAliases>
 		<typeAlias alias="local" type="com.tenm.domain.LocationInfo"/>
-		<typeAlias alias="data" type="com.tenm.domain.Data"/>
 		<typeAlias alias="Beacon" type="com.tenm.domain.Beacon"/>
 	</typeAliases>
 

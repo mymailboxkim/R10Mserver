@@ -34,7 +34,9 @@
 
 <util:properties id="locationDetailKrProperties" location="classpath:resources/locationDetailKr.properties"/>
 <util:properties id="locationDetailEngProperties" location="classpath:resources/locationDetailEng.properties"/>
-<util:properties id="locationNameEngProperties" location="classpath:resources/locationNameEng.properties"/>
+<util:properties id="beaconDetailKrProperties" location="classpath:resources/beaconDetailKr.properties"/>
+<util:properties id="beaconDetailEngProperties" location="classpath:resources/beaconDetailEng.properties"/>
+<util:properties id="NameEngProperties" location="classpath:resources/locationNameEng.properties"/>
 <util:properties id="streamingUrlProperties" location="classpath:resources/streamingUrl.properties"/>
 
 <context:component-scan base-package="com.tenm.service.impl"/>

@@ -41,8 +41,8 @@ public class TourDaoImpl implements TourDao {
 	}
 
 	/**비콘 지역정보*/
-	public LocationInfo getBeaconRegion(Beacon beacon) {
-		return sqlSession.selectOne("Mapper.getRegionInfo", beacon);
+	public Beacon getBeaconRegion(Beacon beacon) {
+		return sqlSession.selectOne("Mapper.getBeaconInfo", beacon);
 	}
 	
 }

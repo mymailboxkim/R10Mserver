@@ -14,22 +14,23 @@
   		<result property="altitude" 	column="altitude" 		jdbcType="VARCHAR"/>
   	</resultMap>
   	
-  	<resultMap id="beaconSelectMap" type="Beacon">
-  	    <result property="regionName" 	column="region_name" 	jdbcType="VARCHAR"/>
+   	<resultMap id="beaconSelectMap" type="beacon">
+  		<result property="regionName" 	column="region_name" 	jdbcType="VARCHAR"/>
   		<result property="uuid" 		column="uuid" 			jdbcType="VARCHAR"/>
   		<result property="major" 		column="major" 			jdbcType="INTEGER"/>
   		<result property="minor" 		column="minor" 			jdbcType="INTEGER"/>
-  	</resultMap>
-  	
-    <select id="getLocationInfo" resultMap="locationSelectMap">
+  	</resultMap>	
+  	  	
+    <select id="getLocationInfo" parameterType="string" resultMap="locationSelectMap">
   		SELECT
 		local_no, local_name, latitude, longitude, altitude
 		FROM local_info
+		WHERE area_name=#{value}
   	</select>
   	
-    <select id="getRegionInfo" parameterType="Beacon" resultMap="beaconSelectMap">
+    <select id="getBeaconInfo" parameterType="Beacon" resultMap="beaconSelectMap">
   		SELECT
-		region_no, region_name, uuid, major, minor, local_no
+		region_name, uuid, major, minor
 		FROM region_info
 		WHERE uuid=#{uuid} AND major=#{major} AND minor=#{minor}
   	</select>
