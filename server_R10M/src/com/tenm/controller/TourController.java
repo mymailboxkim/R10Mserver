@@ -69,7 +69,6 @@ public class TourController {
 						Model model){
 		
 		System.out.println("==========Beacon request==========");
-		//model.addAttribute(tourService.getBeaconRegion(new Beacon(uuid, major, minor)));
 		model.addAttribute("lat", tourService.getBeaconRegion(new Beacon(uuid, major, minor)).getLat());
 		model.addAttribute("lng", tourService.getBeaconRegion(new Beacon(uuid, major, minor)).getLng());
 		model.addAttribute("altitude", tourService.getBeaconRegion(new Beacon(uuid, major, minor)).getAltitude());
