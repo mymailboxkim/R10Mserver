@@ -68,44 +68,41 @@ VALUES (TOUR_LOCAL.nextval, 'manager3', '역삼역', '37.50081','127.036936', '0', 
 
 /*비콘(Beacon)정보*/
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '해치', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
-
-
-/*
-INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '천록', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '해치', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11001');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '청동향로', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '천록', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11002');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '무쇠드므', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '청동향로', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11003');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '월대', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '무쇠드므', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11004');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '북측담장', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '월대', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11005');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '아미산', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '북측담장', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11006');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '옥루기륜', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '아미산', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11007');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '지붕의합각', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '옥루기륜', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11008');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '꽃담', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '지붕의합각', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11009');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '십장생굴뚝', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '꽃담', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11010');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '열상진원샘', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '십장생굴뚝', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11011');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (TOUR_REGION.nextval, '전기발상지', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481');
+VALUES (TOUR_REGION.nextval, '열상진원샘', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11012');
 
-*/
+INSERT INTO region_info (region_no, region_name, uuid, major, minor)
+VALUES (TOUR_REGION.nextval, '전기발상지', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11013');
+
