@@ -22,8 +22,8 @@ public class TourController {
 		System.out.println("========== TourController Constructor ==========");
 	}
 	
-	/**«—±€ ∑Œƒ…¿Ãº«µ•¿Ã≈Õ ƒ¡∆Æ∑—∑Ø*/
-//	http://192.168.200.93:8080/app/kr/gyungbokgung.json
+	/**ÌïúÍ∏Ä Î°úÏºÄÏù¥ÏÖòÎç∞Ïù¥ÌÑ∞ Ïª®Ìä∏Î°§Îü¨*/
+//	http://192.168.200.93:8080/app/kr/Í≤ΩÎ≥µÍ∂Å.json
 	@RequestMapping(value="/kr/{areaName}", method=RequestMethod.GET)
 	public void jsonLocationDataKrController
 				(@PathVariable String areaName, Model model){
@@ -31,8 +31,8 @@ public class TourController {
 		model.addAttribute(areaName, tourService.getLocationDataKrList(areaName));
 	}
 	
-	/**øµπÆ ∑Œƒ…¿Ãº«µ•¿Ã≈Õ ƒ¡∆Æ∑—∑Ø*/
-//	http://192.168.200.93:8080/app/eng/gyungbokgung.json
+	/**ÏòÅÎ¨∏ Î°úÏºÄÏù¥ÏÖòÎç∞Ïù¥ÌÑ∞ Ïª®Ìä∏Î°§Îü¨*/
+//	http://192.168.200.93:8080/app/eng/Í≤ΩÎ≥µÍ∂Å.json
 	@RequestMapping(value="/eng/{areaName}", method=RequestMethod.GET)
 	public void jsonLocationDataEngController
 				(@PathVariable String areaName, Model model){
@@ -40,8 +40,8 @@ public class TourController {
 		model.addAttribute(areaName, tourService.getLocationDataEngList(areaName));
 	}
 	
-	/**«—±€ ∑Œƒ…¿Ãº«µ•¿Ã≈Õ ∏  ƒ¡∆Æ∑—∑Ø*/
-//	http://192.168.200.93:8080/app/kr/locationDataMap/gyungbokgung.json
+	/**ÌïúÍ∏Ä Î°úÏºÄÏù¥ÏÖòÎç∞Ïù¥ÌÑ∞ Îßµ Ïª®Ìä∏Î°§Îü¨*/
+//	http://192.168.200.93:8080/app/kr/locationDataMap/Í≤ΩÎ≥µÍ∂Å.json
 	@RequestMapping(value="/kr/locationDataMap/{areaName}", method=RequestMethod.GET)
 	public void jsonLocationMapController
 				(@PathVariable String areaName, Model model){
@@ -50,30 +50,39 @@ public class TourController {
 		model.addAttribute(areaName, tourService.getLocationDataKrMap(areaName));
 	}
 	
-	/**øµªÛ Ω∫∆Æ∏Æπ÷ ƒ¡∆Æ∑—∑Ø*/
-//	http://192.168.200.93:8080/app/video/Geunjeongjeon.json
-	@RequestMapping(value="/video/{locationName}")
+	/**ÏòÅÏÉÅ Ïä§Ìä∏Î¶¨Î∞ç Ïª®Ìä∏Î°§Îü¨*/
+//	http://192.168.200.93:8080/app/video/kr/Geunjeongjeon.json
+	@RequestMapping(value="/video/kr/{locationName}")
 	public void streamingVideoController
 				(@PathVariable String locationName, Model model){
 		System.out.println("==========VIDEO request==========");
 		model.addAttribute("videoUrl", tourService.getStremingUrl(locationName));
 	}
 	
-	/**∫Òƒ‹ ƒ¡∆Æ∑—∑Ø*/
-//	http://192.168.200.93:8080/app/beacon/8492E75F-4FD6-469D-B132-043FE94921D8/104/51
-	@RequestMapping(value="/beacon/{uuid}/{major}/{minor}", method=RequestMethod.GET)
-	public void beaconController
+	/**ÌïúÍ∏Ä ÎπÑÏΩò Îç∞Ïù¥ÌÑ∞ Ïª®Ìä∏Î°§Îü¨*/
+//	http://192.168.200.93:8080/app/beacon/kr/8492e75f-4fd6-469d-b132-043fe94921d8/11/11001
+	@RequestMapping(value="/beacon/kr/{uuid}/{major}/{minor}", method=RequestMethod.GET)
+	public void beaconDataKrController
 				(@PathVariable String uuid,
 						@PathVariable int major,
 						@PathVariable int minor,
 						Model model){
-		
 		System.out.println("==========Beacon request==========");
-		model.addAttribute("lat", tourService.getBeaconRegion(new Beacon(uuid, major, minor)).getLat());
-		model.addAttribute("lng", tourService.getBeaconRegion(new Beacon(uuid, major, minor)).getLng());
-		model.addAttribute("altitude", tourService.getBeaconRegion(new Beacon(uuid, major, minor)).getAltitude());
-		model.addAttribute("locationName", tourService.getBeaconRegion(new Beacon(uuid, major, minor)).getLocationName());
-		model.addAttribute("locationDetail", tourService.getBeaconRegion(new Beacon(uuid, major, minor)).getLocationDetail());
+		model.addAttribute("locationName", tourService.getBeaconDataKr(new Beacon(uuid, major, minor)).getRegionName());
+		model.addAttribute("locationDetail", tourService.getBeaconDataKr(new Beacon(uuid, major, minor)).getRegionDetail());
+	}
+	
+	/**ÏòÅÎ¨∏ ÎπÑÏΩò Îç∞Ïù¥ÌÑ∞ Ïª®Ìä∏Î°§Îü¨*/
+//	http://192.168.200.93:8080/app/beacon/eng/8492e75f-4fd6-469d-b132-043fe94921d8/11/11001
+	@RequestMapping(value="/beacon/eng/{uuid}/{major}/{minor}", method=RequestMethod.GET)
+	public void beaconDataEngController
+				(@PathVariable String uuid,
+						@PathVariable int major,
+						@PathVariable int minor,
+						Model model){
+		System.out.println("==========Beacon request==========");
+		model.addAttribute("regionName", tourService.getBeaconDataEng(new Beacon(uuid, major, minor)).getRegionName());
+		model.addAttribute("regionDetail", tourService.getBeaconDataEng(new Beacon(uuid, major, minor)).getRegionDetail());
 	}
 	
 }

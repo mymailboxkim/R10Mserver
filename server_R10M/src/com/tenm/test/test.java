@@ -31,7 +31,7 @@ public class test {
 	@Test
 	public void testGetBeaconInfoService() throws Exception{
 		Beacon beacon = new Beacon();
-		beacon.setUuid("8492e75f-4fd6-469d-b132-043-fe94921d8");
+		beacon.setUuid("8492e75f-4fd6-469d-b132-043fe94921d8");
 		beacon.setMajor(11305);
 		beacon.setMinor(19481);
 		System.out.println(tourService.getBeaconDataKr(beacon));
@@ -41,7 +41,7 @@ public class test {
 	//@Test
 	public void testGetBeaconInfoDao() throws Exception{
 		Beacon beacon = new Beacon();
-		beacon.setUuid("8492e75f-4fd6-469d-b132-043-fe94921d8");
+		beacon.setUuid("8492e75f-4fd6-469d-b132-043fe94921d8");
 		beacon.setMajor(11305);
 		beacon.setMinor(19481);
 		System.out.println(tourDao.getBeaconRegion(beacon));

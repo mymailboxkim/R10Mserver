@@ -21,7 +21,7 @@ public class TourServiceImpl implements TourService {
 	@Qualifier("tourDaoImpl")
 	private TourDao tourDao;
 
-	/**°¢Á¾ µ¥ÀÌÅ¸ ÇÁ·ÎÆÛÆ¼ ¼¼ÆÃ*/
+	/**ë°ì´íƒ€ í”„ë¡œí¼í‹° ì„¸íŒ…*/
 	@Value("#{locationDetailKrProperties}") Map<String, String> locationDetailKrProperties;
 	@Value("#{locationDetailEngProperties}") Map<String, String> locationDetailEngProperties;
 	@Value("#{beaconDetailKrProperties}") Map<String, String> beaconDetailKrProperties;
@@ -35,17 +35,20 @@ public class TourServiceImpl implements TourService {
 	}
 
 	//method
-	/**ÇÑ±Û ·ÎÄÉÀÌ¼Ç µ¥ÀÌÅÍ ¸®½ºÆ®*/
-	public List getLocationDataKrList(String areaName) {	//ÀüÃ¼LocationInfo¸¦ List·Î ¸®ÅÏ
+	/**í•œê¸€ ë¡œì¼€ì´ì…˜ ë°ì´í„° ë¦¬ìŠ¤íŠ¸*/
+	public List getLocationDataKrList(String areaName) {
+		System.out.println(areaName);
 		List<LocationInfo> locationList = tourDao.getLocationDataList(areaName);
 		for (int i = 0; i < locationList.size(); i++) {
-			locationList.get(i).setLocationDetail(locationDetailKrProperties(locationList.get(i)));	
+			locationList.get(i).setLocationDetail(locationDetailKrProperties(locationList.get(i)));
+			System.out.println(locationList.get(i).toString());
+			
 		}
 		return locationList;
 	}
 	
-	/**¿µ¹® ·ÎÄÉÀÌ¼Ç µ¥ÀÌÅÍ ¸®½ºÆ®*/
-	public List getLocationDataEngList(String areaName) {	//ÀüÃ¼LocationInfo¸¦ List·Î ¸®ÅÏ
+	/**ì˜ë¬¸ ë¡œì¼€ì´ì…˜ ë°ì´í„° ë¦¬ìŠ¤íŠ¸*/
+	public List getLocationDataEngList(String areaName) {
 		List<LocationInfo> locationList = tourDao.getLocationDataList(areaName);
 		for (int i = 0; i < locationList.size(); i++) {
 			locationList.get(i).setLocationName(locationNameEngProperties(locationList.get(i)));
@@ -54,7 +57,7 @@ public class TourServiceImpl implements TourService {
 		return locationList;
 	}
 	
-	/**ÇÑ±Û ·ÎÄÉÀÌ¼Ç µ¥ÀÌÅÍ ¸Ê*/
+	/**í•œê¸€ ë¡œì¼€ì´ì…˜ ë°ì´í„° ë§µ*/
 	public Map getLocationDataKrMap(String areaName) {	
 		Map<String, LocationInfo> serverLocationMap = tourDao.getLocationDataMap(areaName);
 		Map<String, LocationInfo> locationMap = new HashMap();
@@ -66,14 +69,14 @@ public class TourServiceImpl implements TourService {
 		return locationMap;
 	}
 	
-	/**ÇÑ±Û ºñÄÜ µ¥ÀÌÅÍ*/
+	/**í•œê¸€ ë¹„ì½˜ ì§€ì—­ì •ë³´*/
 	public Beacon getBeaconDataKr(Beacon beacon) {
 		Beacon beaconInfo = tourDao.getBeaconRegion(beacon);
 		beaconInfo.setRegionDetail(beaconDetailKrProperties(beaconInfo));
 		return beaconInfo;
 	}
 	
-	/**¿µ¹® ºñÄÜ µ¥ÀÌÅÍ*/
+	/**ì˜ë¬¸ ë¹„ì½˜ ì§€ì—­ì •ë³´*/
 	public Beacon getBeaconDataEng(Beacon beacon) {
 		Beacon beaconInfo = tourDao.getBeaconRegion(beacon);
 		beaconInfo.setRegionName(beaconNameEngProperties(beaconInfo));
@@ -81,7 +84,7 @@ public class TourServiceImpl implements TourService {
 		return beaconInfo;
 	}
 
-	/**½ºÆ®¸®¹Ö ¼­¹ö url*/
+	/**ìŠ¤íŠ¸ë¦¬ë° ì„œë²„ url*/
 	public String getStremingUrl(String locationName){
 		return getStreamingUrlProperties(locationName);
 	}
@@ -89,38 +92,37 @@ public class TourServiceImpl implements TourService {
 	
 	
 	//private method
-	/**ÇÑ±Û ·ÎÄÉÀÌ¼Ç µ¥ÀÌÅÍ¿¡ µğÅ×ÀÏ ÇÁ·ÎÆÛÆ¼ ÁÖÀÔ*/
+	/**í•œê¸€ ë¡œì¼€ì´ì…˜ ë°ì´í„°ì— ë””í…Œì¼ í”„ë¡œí¼í‹° ì£¼ì…*/
 	private String locationDetailKrProperties(LocationInfo locationInfo){
 		return (String)locationDetailKrProperties.get(locationInfo.getLocationName());
 	}
 	
-	/**¿µ¹® ·ÎÄÉÀÌ¼Ç µ¥ÀÌÅÍ¿¡ µğÅ×ÀÏ ÇÁ·ÎÆÛÆ¼ ÁÖÀÔ*/
+	/**ì˜ë¬¸ ë¡œì¼€ì´ì…˜ ë°ì´í„°ì— ë””í…Œì¼ í”„ë¡œí¼í‹° ì£¼ì…*/
 	private String locationDetailEngProperties(LocationInfo locationInfo){
 		return (String)locationDetailEngProperties.get(locationInfo.getLocationName());
 	}
 	
-	/**¿µ¹® ·ÎÄÉÀÌ¼Ç µ¥ÀÌÅÍ¿¡ ³×ÀÓ ÇÁ·ÎÆÛÆ¼ ÁÖÀÔ*/
+	/**ì˜ë¬¸ ë¡œì¼€ì´ì…˜ ë°ì´í„°ì— ë„¤ì„ í”„ë¡œí¼í‹° ì£¼ì…*/
 	private String locationNameEngProperties(LocationInfo locationInfo){
 		return (String)NameEngProperties.get(locationInfo.getLocationName());
 	}
 	
-	/**ÇÑ±Û ºñÄÜ µ¥ÀÌÅÍ¿¡ µğÅ×ÀÏ ÇÁ·ÎÆÛÆ¼ ÁÖÀÔ*/
+	/**í•œê¸€ ë¹„ì½˜ ë°ì´í„°ì— ë””í…Œì¼ í”„ë¡œí¼í‹° ì£¼ì…*/
 	private String beaconDetailKrProperties(Beacon beacon){
 		return (String)beaconDetailKrProperties.get(beacon.getRegionName());
 	}
 	
-	/**¿µ¹® ºñÄÜ µ¥ÀÌÅÍ¿¡ µğÅ×ÀÏ ÇÁ·ÎÆÛÆ¼ ÁÖÀÔ*/
+	/**í•œê¸€ ë¹„ì½˜ ë°ì´í„°ì— ë””í…Œì¼ í”„ë¡œí¼í‹° ì£¼ì…*/
 	private String beaconDetailEngProperties(Beacon beacon){
 		return (String)beaconDetailEngProperties.get(beacon.getRegionName());
 	}
 	
-	/**¿µ¹® ºñÄÜ µ¥ÀÌÅÍ¿¡ ³×ÀÓ ÇÁ·ÎÆÛÆ¼ ÁÖÀÔ*/
+	/**ì˜ë¬¸ ë¹„ì½˜ ë°ì´í„°ì— ë„¤ì„ í”„ë¡œí¼í‹° ì£¼ì…*/
 	private String beaconNameEngProperties(Beacon beacon){
 		return (String)NameEngProperties.get(beacon.getRegionName());
 	}
 	
-	
-	/**½ºÆ®¸®¹Ö url*/
+	/**streaming url*/
 	private String getStreamingUrlProperties(String locationName){
 		return (String)streamingUrlProperties.get(locationName);
 	}

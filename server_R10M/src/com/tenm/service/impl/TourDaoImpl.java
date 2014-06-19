@@ -30,17 +30,18 @@ public class TourDaoImpl implements TourDao {
 	}
 
 	//Method
-	/**·ÎÄÉÀÌ¼Ç µ¥ÀÌÅÍ ¸®½ºÆ®*/
+	/**ë¡œì¼€ì´ì…˜ ë°ì´í„° ë¦¬ìŠ¤íŠ¸*/
 	public List<LocationInfo> getLocationDataList(String areaName) {	
+		System.out.println(areaName);
 		return sqlSession.selectList("Mapper.getLocationInfo", areaName);
 	}
 
-	/**·ÎÄÉÀÌ¼Ç µ¥ÀÌÅÍ ¸Ê*/
+	/**ë¡œì¼€ì´ì…˜ ë°ì´í„° ë§µ*/
 	public Map<String, LocationInfo> getLocationDataMap(String areaName) {
 		return sqlSession.selectMap("Mapper.getLocationInfo", "locationName");
 	}
 
-	/**ºñÄÜ Áö¿ªÁ¤º¸*/
+	/**ë¹„ì½˜ ì§€ì—­ì •ë³´*/
 	public Beacon getBeaconRegion(Beacon beacon) {
 		return sqlSession.selectOne("Mapper.getBeaconInfo", beacon);
 	}
