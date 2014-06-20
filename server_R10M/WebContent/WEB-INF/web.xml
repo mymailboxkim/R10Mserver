@@ -31,6 +31,7 @@
   <servlet-mapping>
     <servlet-name>frontController</servlet-name>
     <url-pattern>/app/*</url-pattern>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
   <display-name>serverTest_v4</display-name>
   <welcome-file-list>

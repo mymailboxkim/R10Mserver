@@ -68,8 +68,8 @@ public class TourController {
 						@PathVariable int minor,
 						Model model){
 		System.out.println("==========Beacon request==========");
-		model.addAttribute("locationName", tourService.getBeaconDataKr(new Beacon(uuid, major, minor)).getRegionName());
-		model.addAttribute("locationDetail", tourService.getBeaconDataKr(new Beacon(uuid, major, minor)).getRegionDetail());
+		model.addAttribute("regionName", tourService.getBeaconDataKr(new Beacon(uuid, major, minor)).getRegionName());
+		model.addAttribute("regionDetail", tourService.getBeaconDataKr(new Beacon(uuid, major, minor)).getRegionDetail());
 	}
 	
 	/**영문 비콘 데이터 컨트롤러*/
