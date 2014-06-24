@@ -1,96 +1,95 @@
+INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
+VALUES (null, 'manager1', 'Í¥ëÌôîÎ¨∏', '37.576037','126.9769', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager1', '±§»≠πÆ', '37.576037','126.9769', '0', '∞Ê∫π±√');
+VALUES (null, 'manager2', 'Ìù•Î°ÄÎ¨∏', '37.576955','126.976884', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager2', '»Ô∑ πÆ', '37.576955','126.976884', '0', '∞Ê∫π±√');
+VALUES (null, 'manager3', 'Í∑ºÏ†ïÏ†Ñ', '37.578566','126.976954', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager3', '±Ÿ¡§¿¸', '37.578566','126.976954', '0', '∞Ê∫π±√');
+VALUES (null, 'manager4', 'ÏÇ¨Ï†ïÏ†Ñ', '37.579102','126.977008', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager4', 'ªÁ¡§¿¸', '37.579102','126.977008', '0', '∞Ê∫π±√');
+VALUES (null, 'manager4', 'ÏàòÏ†ïÏ†Ñ', '37.578894', '126.975966', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager4', 'ºˆ¡§¿¸', '37.578894', '126.975966', '0', '∞Ê∫π±√');
+VALUES (null, 'manager5', 'Í∞ïÎÖïÏ†Ñ', '37.579523', '126.977071', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager5', '∞≠≥Á¿¸', '37.579523', '126.977071', '0', '∞Ê∫π±√');
+VALUES (null, 'manager6', 'ÍµêÌÉúÏ†Ñ', '37.579923', '126.97705', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager6', '±≥≈¬¿¸', '37.579923', '126.97705', '0', '∞Ê∫π±√');
+VALUES (null, 'manager7', 'ÏûêÍ≤ΩÏ†Ñ', '37.580297', '126.97814', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager7', '¿⁄∞Ê¿¸', '37.580297', '126.97814', '0', '∞Ê∫π±√');
+VALUES (null, 'manager8', 'ÏûêÏÑ†Îãπ', '37.579051', '126.977973', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager8', '¿⁄º±¥Á', '37.579051', '126.977973', '0', '∞Ê∫π±√');
+VALUES (null, 'manager9', 'Í≤ΩÌöåÎ£®', '37.579736','126.975956', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager9', '∞Ê»∏∑Á', '37.579736','126.975956', '0', '∞Ê∫π±√');
+VALUES (null, 'manager10', 'Ìñ•ÏõêÏ†ï', '37.582337','126.977008', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager10', '«‚ø¯¡§', '37.582337','126.977008', '0', '∞Ê∫π±√');
+VALUES (null, 'manager11', 'ÌÉúÏõêÏ†Ñ', '37.582597', '126.974229', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager11', '≈¬ø¯¿¸', '37.582597', '126.974229', '0', '∞Ê∫π±√');
+VALUES (null, 'manager12', 'Í±¥Ï≤≠Í∂Å', '37.583243', '126.977185', '0', 'Í≤ΩÎ≥µÍ∂Å');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager12', '∞«√ª±√', '37.583243', '126.977185', '0', '∞Ê∫π±√');
+VALUES (null, 'manager13', 'ÏßëÏò•Ïû¨', '37.583434', '126.97609', '0', 'Í≤ΩÎ≥µÍ∂Å');
+
+
+/* Test Data Ï†ïÎ≥¥*/
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager13', '¡˝ø¡¿Á', '37.583434', '126.97609', '0', '∞Ê∫π±√');
-
-
-/* Test Data ¡§∫∏*/
+VALUES (null, 'manager1', 'Í∞ïÎÇ®Ïó≠', '37.576037','127.027621', '0', 'test');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager1', '∞≠≥≤ø™', '37.576037','127.027621', '0', 'test');
+VALUES (null, 'manager2', 'Ïã†ÎÖºÌòÑÏó≠', '37.504724','127.02538', '0', 'test');
 
 INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager2', 'Ω≈≥Ì«ˆø™', '37.504724','127.02538', '0', 'test');
-
-INSERT INTO local_info (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager3', 'ø™ªÔø™', '37.50081','127.036936', '0', 'test');
+VALUES (null, 'manager3', 'Ïó≠ÏÇºÏó≠', '37.50081','127.036936', '0', 'test');
 
 
-/*∫Òƒ‹(Beacon)¡§∫∏*/
+/*ÎπÑÏΩò(Beacon)Ï†ïÎ≥¥*/
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, '«ÿƒ°', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11001');
-
-INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, '√µ∑œ', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11002');
+VALUES (null, 'Ìï¥Ïπò', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11001');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, '√ªµø«‚∑Œ', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11003');
+VALUES (null, 'Ï≤úÎ°ù', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11002');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, 'π´ºËµÂπ«', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11004');
+VALUES (null, 'Ï≤≠ÎèôÌñ•Î°ú', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11003');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, 'ø˘¥Î', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11005');
+VALUES (null, 'Î¨¥Ïá†ÎìúÎØÄ', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11004');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, '∫œ√¯¥„¿Â', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11006');
+VALUES (null, 'ÏõîÎåÄ', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11005');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, 'æ∆πÃªÍ', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11007');
+VALUES (null, 'Î∂ÅÏ∏°Îã¥Ïû•', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11006');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, 'ø¡∑Á±‚∑˚', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11008');
+VALUES (null, 'ÏïÑÎØ∏ÏÇ∞', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11007');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, '¡ˆ∫ÿ¿««’∞¢', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11009');
+VALUES (null, 'Ïò•Î£®Í∏∞Î•ú', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11008');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, '≤…¥„', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11010');
+VALUES (null, 'ÏßÄÎ∂ïÏùòÌï©Í∞Å', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11009');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, 'Ω ¿Âª˝±º∂“', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11011');
+VALUES (null, 'ÍΩÉÎã¥', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11010');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, 'ø≠ªÛ¡¯ø¯ª˘', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11012');
+VALUES (null, 'Ïã≠Ïû•ÏÉùÍµ¥Îöù', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11011');
 
 INSERT INTO region_info (region_no, region_name, uuid, major, minor)
-VALUES (null, '¿¸±‚πﬂªÛ¡ˆ', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11013');
+VALUES (null, 'Ïó¥ÏÉÅÏßÑÏõêÏÉò', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11012');
+
+INSERT INTO region_info (region_no, region_name, uuid, major, minor)
+VALUES (null, 'Ï†ÑÍ∏∞Î∞úÏÉÅÏßÄ', '8492e75f-4fd6-469d-b132-043fe94921d8', '11', '11013');
 
