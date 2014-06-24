@@ -40,18 +40,26 @@ public class TourController {
 		model.addAttribute(areaName, tourService.getLocationDataEngList(areaName));
 	}
 	
+	/**일본어 로케이션데이터 컨트롤러*/
+//	http://192.168.200.93:8080/app/jp/경복궁.json
+	@RequestMapping(value="/jp/{areaName}", method=RequestMethod.GET)
+	public void jsonLocationDataJpController
+				(@PathVariable String areaName, Model model){
+		System.out.println("==========JSON JP request==========");
+		model.addAttribute(areaName, tourService.getLocationDataJpList(areaName));
+	}
+	
 	/**한글 로케이션데이터 맵 컨트롤러*/
 //	http://192.168.200.93:8080/app/kr/locationDataMap/경복궁.json
 	@RequestMapping(value="/kr/locationDataMap/{areaName}", method=RequestMethod.GET)
 	public void jsonLocationMapController
 				(@PathVariable String areaName, Model model){
-		
 		System.out.println("==========JSON Map request==========");
 		model.addAttribute(areaName, tourService.getLocationDataKrMap(areaName));
 	}
 	
 	/**영상 스트리밍 컨트롤러*/
-//	http://192.168.200.93:8080/app/video/kr/Geunjeongjeon.json
+//	호스팅 서버 이용
 	@RequestMapping(value="/video/kr/{locationName}")
 	public void streamingVideoController
 				(@PathVariable String locationName, Model model){
@@ -83,6 +91,19 @@ public class TourController {
 		System.out.println("==========Beacon request==========");
 		model.addAttribute("regionName", tourService.getBeaconDataEng(new Beacon(uuid, major, minor)).getRegionName());
 		model.addAttribute("regionDetail", tourService.getBeaconDataEng(new Beacon(uuid, major, minor)).getRegionDetail());
+	}
+	
+	/**일본어 비콘 데이터 컨트롤러*/
+//	http://192.168.200.93:8080/app/beacon/jp/8492e75f-4fd6-469d-b132-043fe94921d8/11/11001
+	@RequestMapping(value="/beacon/jp/{uuid}/{major}/{minor}", method=RequestMethod.GET)
+	public void beaconDataJpController
+				(@PathVariable String uuid,
+						@PathVariable int major,
+						@PathVariable int minor,
+						Model model){
+		System.out.println("==========Beacon request==========");
+		model.addAttribute("regionName", tourService.getBeaconDataJp(new Beacon(uuid, major, minor)).getRegionName());
+		model.addAttribute("regionDetail", tourService.getBeaconDataJp(new Beacon(uuid, major, minor)).getRegionDetail());
 	}
 	
 }

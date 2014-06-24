@@ -38,7 +38,7 @@ public class TourDaoImpl implements TourDao {
 
 	/**로케이션 데이터 맵*/
 	public Map<String, LocationInfo> getLocationDataMap(String areaName) {
-		return sqlSession.selectMap("Mapper.getLocationInfo", "locationName");
+		return sqlSession.selectMap("Mapper.getLocationInfo", areaName, "locationName");
 	}
 
 	/**비콘 지역정보*/

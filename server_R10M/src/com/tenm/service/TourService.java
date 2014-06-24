@@ -11,6 +11,8 @@ public interface TourService {
 	public List getLocationDataKrList(String areaName);
 	
 	public List getLocationDataEngList(String areaName);
+	
+	public List getLocationDataJpList(String areaName);
 
 	public Map getLocationDataKrMap(String areaName);
 	
@@ -19,5 +21,7 @@ public interface TourService {
 	public Beacon getBeaconDataKr(Beacon beacon);
 	
 	public Beacon getBeaconDataEng(Beacon beacon);
+	
+	public Beacon getBeaconDataJp(Beacon beacon);
 
 }
