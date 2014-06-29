@@ -1,0 +1,76 @@
+
+	
+    .content {
+    	height:230px;
+    	min-width: 900px;
+    }
+	
+    .content #image1 {
+	      position: relative;
+	      min-width: 400px;
+	      height: 160px;
+	      float:left;
+    }
+        
+	.banner {
+		position: relative;
+    	padding-left:10px;
+    	padding-top:7px;
+    	padding-right:10px;
+    	margin-right:20px;
+    	float:left;
+    	border-right: 1px solid #ccc;
+    	min-width:200px;
+    	width:330px;
+	}
+	
+	.banner img{
+		width: 150px;
+		height: 40px;
+		padding-left: 3px;
+		padding-top: 5px;
+	}
+	
+	.banner h5{
+		height: 10px;
+	}
+    
+    .notice table{
+    	min-width: 250px;
+    }
+    
+    .store {
+    	position: relative;
+    	min-width:200px;
+    	width:200px;
+    	height: 170px;
+    	float:left;
+    }
+    
+    .store #image2{
+   		position: relative;
+    	height:40px;
+    	width:40px;
+    }
+    
+    .store td{
+    	height: 50px;
+    }
+    
+    .store hr {
+    	margin:0 0;
+    }
+    
+    .store h3{
+    	line-height: 20px;
+    	width:100px;
+    	float:left;
+    }
+    
+    .store h5{
+    	width:100px;
+    	float:left;
+    	text-align: right;
+    }
+    
+

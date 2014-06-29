@@ -24,14 +24,14 @@
     <select id="getLocationInfo" parameterType="string" resultMap="locationSelectMap">
   		SELECT
 		local_no, local_name, latitude, longitude, altitude
-		FROM local_info
+		FROM LOCAL_INFO
 		WHERE area_name=#{value}
   	</select>
   	
     <select id="getBeaconInfo" parameterType="Beacon" resultMap="beaconSelectMap">
   		SELECT
 		region_name, uuid, major, minor
-		FROM region_info
+		FROM REGION_INFO
 		WHERE uuid=#{uuid} AND major=#{major} AND minor=#{minor}
   	</select>
   	

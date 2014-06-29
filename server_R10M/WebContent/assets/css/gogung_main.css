@@ -1,0 +1,77 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+
+/* 전체 내용을 감쌈*/
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.container > hr {
+  margin: 20px 0;
+}
+
+img {
+  
+  /* height:120px; */
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+
+.logoimg {
+  text-align: center;
+}
+
+.logoimg .logo {
+  font-size: 15px;
+}
+
+/*탐색막내 링크가 공간을 모두 채우도록 함*/
+
+.navbar {
+  padding: 0;
+  width: 54%;
+  margin-left: 22%;
+}
+.navbar .nav {
+  margin: 0;
+  display: table;
+  width: 100%;
+}
+.navbar .nav > li {
+  display:table-cell; 
+  width: 1%;
+  float: none;
+}
+.navbar .nav > li > a {
+  font-weight: bold; 
+  text-align: center;
+  margin: 0 20px 0 20px;
+   /* 
+  border-left: 1px solid rgba(255,255,255,.75);
+  border-right: 1px solid rgba(0,0,0,.1); */
+}
+
+.dropdown-menu{
+  margin:0;
+}
+ul.nav  li.dropdown:hover > ul.dropdown-menu{
+  display: block;
+}
+
+
+.navbar .nav > li > a:hover{
+  background-image: url('../img/blue.gif');
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
+.navbar li ul a:hover, .navbar li ul li:hover a{
+	background: rgb(71,71,71);
+	border:0px;
+	color:#ffffff;
+	text-decoration:none;
+}

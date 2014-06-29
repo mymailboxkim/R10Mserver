@@ -1,17 +1,13 @@
 package com.tenm.test;
 
-import java.util.Map;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.tenm.domain.Beacon;
-import com.tenm.domain.LocationInfo;
 import com.tenm.service.TourDao;
 import com.tenm.service.TourService;
 
@@ -32,8 +28,8 @@ public class test {
 	public void testGetBeaconInfoService() throws Exception{
 		Beacon beacon = new Beacon();
 		beacon.setUuid("8492e75f-4fd6-469d-b132-043fe94921d8");
-		beacon.setMajor(11305);
-		beacon.setMinor(19481);
+		beacon.setMajor(11);
+		beacon.setMinor(11001);
 		System.out.println(tourService.getBeaconDataKr(beacon));
 		System.out.println(tourService.getBeaconDataEng(beacon));
 	}
@@ -42,13 +38,13 @@ public class test {
 	public void testGetBeaconInfoDao() throws Exception{
 		Beacon beacon = new Beacon();
 		beacon.setUuid("8492e75f-4fd6-469d-b132-043fe94921d8");
-		beacon.setMajor(11305);
-		beacon.setMinor(19481);
+		beacon.setMajor(11);
+		beacon.setMinor(11001);
 		System.out.println(tourDao.getBeaconRegion(beacon));
 	}
 	
 	/*
-	@Value("#{dataProperties}") Map map;	//data.properties ÆÄÀÏÀÇ ¸ðµç°ªÀ» MapÀ¸·Î ÀúÀå
+	@Value("#{dataProperties}") Map map;	//data.properties ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ç°ªï¿½ï¿½ Mapï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 	@Test
 	public void testGetLocationInfo() throws Exception{
@@ -62,7 +58,7 @@ public class test {
 	
 	//@Test
 	public void testGetLocation() throws Exception{
-		System.out.println(tourService.getLocationJSON("°­³²¿ª"));
+		System.out.println(tourService.getLocationJSON("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"));
 	}
 	
 	/*
@@ -74,12 +70,12 @@ public class test {
 	@Test
 	public void testGetDataByLocal() throws Exception{
 				
-		//±¤È­¹® Å¬¸¯
-		int localNo = tourService.getLocalInfo().get(0).getLocalNo(); //È­¸é¿¡¼­ Áö¿ªÅ¬¸¯½Ã ±× Áö¿ªÀÇ localNo Àü¼Û
+		//ï¿½ï¿½È­ï¿½ï¿½ Å¬ï¿½ï¿½
+		int localNo = tourService.getLocalInfo().get(0).getLocalNo(); //È­ï¿½é¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ localNo ï¿½ï¿½ï¿½
 		System.out.println("localNo : "+localNo);
 		System.out.println("=================================");
 		
-		for (Data data : tourService.getDataByLocal(localNo)) {	//local¿¡ ÇØ´çµÇ´Â ¸ðµç µ¥ÀÌÅÍ
+		for (Data data : tourService.getDataByLocal(localNo)) {	//localï¿½ï¿½ ï¿½Ø´ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			int dataNo = data.getDataNo();
 			int dataType = data.getDataType();
 			String dataPath = data.getDataPath();
