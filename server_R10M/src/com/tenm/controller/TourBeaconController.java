@@ -25,6 +25,7 @@ public class TourBeaconController {
 	
 	//한글 비콘 데이터 컨트롤러
 //	http://192.168.200.93:8080/app/beacon/kr/8492e75f-4fd6-469d-b132-043fe94921d8/11/11001
+//	http://mycafe24kim.cafe24.com/app/beacon/kr/8492e75f-4fd6-469d-b132-043fe94921d8/11/11001
 	@RequestMapping(value="/kr/{uuid}/{major}/{minor}", method=RequestMethod.GET)
 	public void beaconDataKrController
 				(@PathVariable String uuid,
@@ -69,31 +70,31 @@ public class TourBeaconController {
 	/**한글 비콘 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
 	@RequestMapping(value="/video/kr/{locationName}")
-	public String beaconVideoKrController
+	public void beaconVideoKrController
 				(@PathVariable String locationName, Model model){
 		System.out.println("==========BEACON VIDEO KR request==========");
-		//model.addAttribute("videoUrl", tourService.getBeaconStremingUrlKr(locationName));
-		return "redirect:/"+tourService.getBeaconStremingUrlKr(locationName);
+		model.addAttribute("videoUrl", tourService.getBeaconStremingUrlKr(locationName));
+		//return "redirect:/"+tourService.getBeaconStremingUrlKr(locationName);
 	}
 	
 	/**영문 비콘 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
 	@RequestMapping(value="/video/Eng/{locationName}")
-	public String beaconVideoEngController
+	public void beaconVideoEngController
 				(@PathVariable String locationName, Model model){
 		System.out.println("==========BEACON VIDEO ENG request==========");
-		//model.addAttribute("videoUrl", tourService.getBeaconStremingUrlEng(locationName));
-		return "redirect:/"+tourService.getBeaconStremingUrlEng(locationName);
+		model.addAttribute("videoUrl", tourService.getBeaconStremingUrlEng(locationName));
+		//return "redirect:/"+tourService.getBeaconStremingUrlEng(locationName);
 	}
 	
 	/**일본어 비콘 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
 	@RequestMapping(value="/video/jp/{locationName}")
-	public String beaconVideoJpController
+	public void beaconVideoJpController
 				(@PathVariable String locationName, Model model){
 		System.out.println("==========BEACON VIDEO JP request==========");
-		//model.addAttribute("videoUrl", tourService.getBeaconStremingUrlJp(locationName));
-		return "redirect:/"+tourService.getBeaconStremingUrlJp(locationName);
+		model.addAttribute("videoUrl", tourService.getBeaconStremingUrlJp(locationName));
+		//return "redirect:/"+tourService.getBeaconStremingUrlJp(locationName);
 	}
 
 }

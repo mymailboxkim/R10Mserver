@@ -66,31 +66,31 @@ public class TourLocationController {
 	/**한글 로케이션 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
 	@RequestMapping(value="/video/kr/{locationName}")
-	public String locationVideoKrController
+	public void locationVideoKrController
 				(@PathVariable String locationName, Model model){
 		System.out.println("==========LOCATION VIDEO KR request==========");
-		//model.addAttribute("videoUrl", tourService.getLocationStremingUrlKr(locationName));
-		return "redirect:/"+tourService.getBeaconStremingUrlKr(locationName);
+		model.addAttribute("videoUrl", tourService.getLocationStremingUrlKr(locationName));
+		//return "redirect:/"+tourService.getBeaconStremingUrlKr(locationName);
 	}
 	
 	/**영문 로케이션 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
 	@RequestMapping(value="/video/Eng/{locationName}")
-	public String locationVideoEngController
+	public void locationVideoEngController
 				(@PathVariable String locationName, Model model){
 		System.out.println("==========LOCATION VIDEO ENG request==========");
-		//model.addAttribute("videoUrl", tourService.getLocationStremingUrlEng(locationName));
-		return "redirect:/"+tourService.getLocationStremingUrlEng(locationName);
+		model.addAttribute("videoUrl", tourService.getLocationStremingUrlEng(locationName));
+		//return "redirect:/"+tourService.getLocationStremingUrlEng(locationName);
 	}
 	
 	/**일본어 로케이션 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
 	@RequestMapping(value="/video/jp/{locationName}")
-	public String locationVideoJpController
+	public void locationVideoJpController
 				(@PathVariable String locationName, Model model){
 		System.out.println("==========LOCATION VIDEO JP request==========");
-		//model.addAttribute("videoUrl", tourService.getLocationStremingUrlJp(locationName));
-		return "redirect:/"+tourService.getLocationStremingUrlJp(locationName);
+		model.addAttribute("videoUrl", tourService.getLocationStremingUrlJp(locationName));
+		//return "redirect:/"+tourService.getLocationStremingUrlJp(locationName);
 	}
 
 }
