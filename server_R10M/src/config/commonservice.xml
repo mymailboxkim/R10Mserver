@@ -55,15 +55,15 @@
 	<constructor-arg ref="sqlSessionFactoryBean"/>
 </bean>
 
-<util:properties id="locationDetailKrProperties" location="classpath:resources/locationDetailKr.properties"/>
-<util:properties id="locationDetailEngProperties" location="classpath:resources/locationDetailEng.properties"/>
+<util:properties id="locationDetailKoProperties" location="classpath:resources/locationDetailKo.properties"/>
+<util:properties id="locationDetailEnProperties" location="classpath:resources/locationDetailEn.properties"/>
 <util:properties id="locationDetailJpProperties" location="classpath:resources/locationDetailJp.properties"/>
 
-<util:properties id="locationNameEngProperties" location="classpath:resources/locationNameEng.properties"/>
+<util:properties id="locationNameEnProperties" location="classpath:resources/locationNameEn.properties"/>
 <util:properties id="locationNameJpProperties" location="classpath:resources/locationNameJp.properties"/>
 
-<util:properties id="beaconDetailKrProperties" location="classpath:resources/beaconDetailKr.properties"/>
-<util:properties id="beaconDetailEngProperties" location="classpath:resources/beaconDetailEng.properties"/>
+<util:properties id="beaconDetailKoProperties" location="classpath:resources/beaconDetailKo.properties"/>
+<util:properties id="beaconDetailEnProperties" location="classpath:resources/beaconDetailEn.properties"/>
 <util:properties id="beaconDetailJpProperties" location="classpath:resources/beaconDetailJp.properties"/>
 
 <util:properties id="locationStreamingUrlProperties" location="classpath:resources/locationStreamingUrl.properties"/>

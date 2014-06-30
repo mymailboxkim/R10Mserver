@@ -23,34 +23,34 @@ public class TourBeaconController {
 		System.out.println("========== TourBeaconController Constructor ==========");
 	}
 	
-	//한글 비콘 데이터 컨트롤러
+	/**한글 비콘 데이터 컨트롤러*/
 //	http://192.168.200.93:8080/app/beacon/kr/8492e75f-4fd6-469d-b132-043fe94921d8/11/11001
 //	http://mycafe24kim.cafe24.com/app/beacon/kr/8492e75f-4fd6-469d-b132-043fe94921d8/11/11001
-	@RequestMapping(value="/kr/{uuid}/{major}/{minor}", method=RequestMethod.GET)
-	public void beaconDataKrController
+	@RequestMapping(value="/ko/{uuid}/{major}/{minor}", method=RequestMethod.GET)
+	public void beaconDataKoController
 				(@PathVariable String uuid,
 						@PathVariable int major,
 						@PathVariable int minor,
 						Model model){
-		System.out.println("==========Beacon KR request==========");
-		model.addAttribute("regionName", tourService.getBeaconDataKr(new Beacon(uuid, major, minor)).getRegionName());
-		model.addAttribute("regionDetail", tourService.getBeaconDataKr(new Beacon(uuid, major, minor)).getRegionDetail());
+		System.out.println("==========Beacon KO request==========");
+		model.addAttribute("regionName", tourService.getBeaconDataKo(new Beacon(uuid, major, minor)).getRegionName());
+		model.addAttribute("regionDetail", tourService.getBeaconDataKo(new Beacon(uuid, major, minor)).getRegionDetail());
 	}
 	
-	//영문 비콘 데이터 컨트롤러
+	/**영문 비콘 데이터 컨트롤러*/
 //	http://192.168.200.93:8080/app/beacon/eng/8492e75f-4fd6-469d-b132-043fe94921d8/11/11001
-	@RequestMapping(value="/eng/{uuid}/{major}/{minor}", method=RequestMethod.GET)
-	public void beaconDataEngController
+	@RequestMapping(value="/en/{uuid}/{major}/{minor}", method=RequestMethod.GET)
+	public void beaconDataEnController
 				(@PathVariable String uuid,
 						@PathVariable int major,
 						@PathVariable int minor,
 						Model model){
-		System.out.println("==========Beacon  ENG request==========");
-		model.addAttribute("regionName", tourService.getBeaconDataEng(new Beacon(uuid, major, minor)).getRegionName());
-		model.addAttribute("regionDetail", tourService.getBeaconDataEng(new Beacon(uuid, major, minor)).getRegionDetail());
+		System.out.println("==========Beacon  EN request==========");
+		model.addAttribute("regionName", tourService.getBeaconDataEn(new Beacon(uuid, major, minor)).getRegionName());
+		model.addAttribute("regionDetail", tourService.getBeaconDataEn(new Beacon(uuid, major, minor)).getRegionDetail());
 	}
 	
-	//일본어 비콘 데이터 컨트롤러
+	/**일본어 비콘 데이터 컨트롤러*/
 //	http://192.168.200.93:8080/app/beacon/jp/8492e75f-4fd6-469d-b132-043fe94921d8/11/11001
 	@RequestMapping(value="/jp/{uuid}/{major}/{minor}", method=RequestMethod.GET)
 	public void beaconDataJpController
@@ -69,21 +69,21 @@ public class TourBeaconController {
 	
 	/**한글 비콘 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
-	@RequestMapping(value="/video/kr/{locationName}")
-	public void beaconVideoKrController
+	@RequestMapping(value="/video/ko/{locationName}")
+	public void beaconVideoKoController
 				(@PathVariable String locationName, Model model){
-		System.out.println("==========BEACON VIDEO KR request==========");
-		model.addAttribute("videoUrl", tourService.getBeaconStremingUrlKr(locationName));
+		System.out.println("==========BEACON VIDEO KO request==========");
+		model.addAttribute("videoUrl", tourService.getBeaconStremingUrlKo(locationName));
 		//return "redirect:/"+tourService.getBeaconStremingUrlKr(locationName);
 	}
 	
 	/**영문 비콘 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
-	@RequestMapping(value="/video/Eng/{locationName}")
-	public void beaconVideoEngController
+	@RequestMapping(value="/video/En/{locationName}")
+	public void beaconVideoEnController
 				(@PathVariable String locationName, Model model){
-		System.out.println("==========BEACON VIDEO ENG request==========");
-		model.addAttribute("videoUrl", tourService.getBeaconStremingUrlEng(locationName));
+		System.out.println("==========BEACON VIDEO EN request==========");
+		model.addAttribute("videoUrl", tourService.getBeaconStremingUrlEn(locationName));
 		//return "redirect:/"+tourService.getBeaconStremingUrlEng(locationName);
 	}
 	

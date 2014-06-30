@@ -23,22 +23,22 @@ public class TourLocationController {
 	}
 	
 	/**한글 로케이션데이터 컨트롤러*/
-//	http://192.168.200.93:8080/app/location/kr/경복궁.json
-//	http://mycafe24kim.cafe24.com/app/location/kr/경복궁.json
-	@RequestMapping(value="/kr/{areaName}", method=RequestMethod.GET)
-	public void jsonLocationDataKrController
+//	http://192.168.200.93:8080/app/location/ko/경복궁.json
+//	http://mycafe24kim.cafe24.com/app/location/ko/경복궁.json
+	@RequestMapping(value="/ko/{areaName}", method=RequestMethod.GET)
+	public void jsonLocationDataKoController
 				(@PathVariable String areaName, Model model){
-		System.out.println("==========JSON KR request==========");
-		model.addAttribute(areaName, tourService.getLocationDataKrList(areaName));
+		System.out.println("==========JSON KO request==========");
+		model.addAttribute(areaName, tourService.getLocationDataKoList(areaName));
 	}
 	
 	/**영문 로케이션데이터 컨트롤러*/
-//	http://192.168.200.93:8080/app/location/eng/경복궁.json
-	@RequestMapping(value="/eng/{areaName}", method=RequestMethod.GET)
-	public void jsonLocationDataEngController
+//	http://192.168.200.93:8080/app/location/en/경복궁.json
+	@RequestMapping(value="/en/{areaName}", method=RequestMethod.GET)
+	public void jsonLocationDataEnController
 				(@PathVariable String areaName, Model model){
-		System.out.println("==========JSON ENG request==========");
-		model.addAttribute(areaName, tourService.getLocationDataEngList(areaName));
+		System.out.println("==========JSON EN request==========");
+		model.addAttribute(areaName, tourService.getLocationDataEnList(areaName));
 	}
 	
 	/**일본어 로케이션데이터 컨트롤러*/
@@ -51,12 +51,12 @@ public class TourLocationController {
 	}
 	
 	/**한글 로케이션데이터 맵 컨트롤러*/
-//	http://192.168.200.93:8080/app/location/kr/locationDataMap/경복궁.json
-	@RequestMapping(value="/kr/locationDataMap/{areaName}", method=RequestMethod.GET)
+//	http://192.168.200.93:8080/app/location/ko/locationDataMap/경복궁.json
+	@RequestMapping(value="/ko/locationDataMap/{areaName}", method=RequestMethod.GET)
 	public void jsonLocationMapController
 				(@PathVariable String areaName, Model model){
 		System.out.println("==========JSON Map request==========");
-		model.addAttribute(areaName, tourService.getLocationDataKrMap(areaName));
+		model.addAttribute(areaName, tourService.getLocationDataKoMap(areaName));
 	}
 	
 	
@@ -65,21 +65,21 @@ public class TourLocationController {
 	
 	/**한글 로케이션 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
-	@RequestMapping(value="/video/kr/{locationName}")
-	public void locationVideoKrController
+	@RequestMapping(value="/video/ko/{locationName}")
+	public void locationVideoKoController
 				(@PathVariable String locationName, Model model){
-		System.out.println("==========LOCATION VIDEO KR request==========");
-		model.addAttribute("videoUrl", tourService.getLocationStremingUrlKr(locationName));
+		System.out.println("==========LOCATION VIDEO KO request==========");
+		model.addAttribute("videoUrl", tourService.getLocationStremingUrlKo(locationName));
 		//return "redirect:/"+tourService.getBeaconStremingUrlKr(locationName);
 	}
 	
 	/**영문 로케이션 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
-	@RequestMapping(value="/video/Eng/{locationName}")
-	public void locationVideoEngController
+	@RequestMapping(value="/video/En/{locationName}")
+	public void locationVideoEnController
 				(@PathVariable String locationName, Model model){
-		System.out.println("==========LOCATION VIDEO ENG request==========");
-		model.addAttribute("videoUrl", tourService.getLocationStremingUrlEng(locationName));
+		System.out.println("==========LOCATION VIDEO EN request==========");
+		model.addAttribute("videoUrl", tourService.getLocationStremingUrlEn(locationName));
 		//return "redirect:/"+tourService.getLocationStremingUrlEng(locationName);
 	}
 	

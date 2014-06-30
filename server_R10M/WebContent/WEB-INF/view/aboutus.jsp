@@ -35,14 +35,14 @@
 	      <div class="navbar">
 	          <div class="container">
 	            <ul class="nav">
-	            <li><a href="/gogung/main.do">HOME</a></li>
-	              <li><a href="/gogung/aboutus.do">ABOUT</a></li>
-	              <li><a href="/gogung/store.do">STORE</a></li>
+	            <li><a href="/gogoong/main.do">HOME</a></li>
+	              <li><a href="/gogoong/aboutus.do">ABOUT</a></li>
+	              <li><a href="/gogoong/store.do">STORE</a></li>
 	              <li class="dropdown">
 	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICE</a>
 	                  <ul class="dropdown-menu">
-	                    <li><a href="/gogung/faq.do">FAQ</a></li>
-	                    <li><a href="/gogung/contactus.do">CONTACT US(e-mail)</a></li>
+	                    <li><a href="/gogoong/faq.do">FAQ</a></li>
+	                    <li><a href="/gogoong/contactus.do">CONTACT US(e-mail)</a></li>
 	                    </ul>
 	                </li>
 	            </ul>
