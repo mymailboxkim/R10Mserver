@@ -13,15 +13,15 @@
     
     <!-- 스타일 -->
    
-    <link href="../assets/css/bootstrap-ko.css" rel="stylesheet">
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap-ko.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap-responsive.css" rel="stylesheet">
     
-  	<link href="../assets/css/gogung_main.css" rel="stylesheet">
-  	<link href="../assets/css/gogung_store.css" rel="stylesheet">
-  	<link href="../assets/css/gogung_footer.css" rel="stylesheet">
+  	<link href="../../assets/css/gogung_main.css" rel="stylesheet">
+  	<link href="../../assets/css/gogung_store.css" rel="stylesheet">
+  	<link href="../../assets/css/gogung_footer.css" rel="stylesheet">
   	
 
-	<script src="../assets/js/jquery-1.11.1.js"></script>
+	<script src="../../assets/js/jquery-1.11.1.js"></script>
 	
 	<script src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=d1e2a658e5102ec7ea5725ad04fb1fde"></script>
 	 
@@ -31,21 +31,21 @@
 		<div class="container">
 	
 	      <div class="logoimg">
-	        <image src="../assets/img/go_icon_bg.png" alt="logoimg">
+	        <image src="../../assets/img/go_icon_bg.png" alt="logoimg">
 	        <p class="logo">10M.com</p>
 	      </div>
 	
 	      <div class="navbar">
 	          <div class="container">
 	            <ul class="nav">
-	              <li><a href="/gogoong/app/main_m.do">HOME</a></li>
-	              <li><a href="/gogoong/app/aboutus_m.do">ABOUT</a></li>
-	              <li><a href="/gogoong/app/store_m.do">STORE</a></li>
+	              <li><a href="/gogoong/app/main.do">HOME</a></li>
+	              <li><a href="/gogoong/app/aboutus.do">ABOUT</a></li>
+	              <li><a href="/gogoong/app/store.do">STORE</a></li>
 	              <li class="dropdown">
 	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICE</a>
 	                  <ul class="dropdown-menu">
-	                    <li><a href="/gogoong/app/faq_m.do">FAQ</a></li>
-	                    <li><a href="/gogoong/app/contactus_m.do">CONTACT US(e-mail)</a></li>
+	                    <li><a href="/gogoong/app/faq.do">FAQ</a></li>
+	                    <li><a href="/gogoong/app/contactus.do">CONTACT US(e-mail)</a></li>
 	                    </ul>
 	                </li>
 	            </ul>
@@ -65,7 +65,7 @@ it implements function which can describe Cultural Heritage data using the camer
 		
 		<div class="row">
 			<div class="span4">
-				<img id="img_app1" src="../assets/img/go_icon.png" alt="">
+				<img id="img_app1" src="../../assets/img/go_icon.png" alt="">
 				<h4>Gyeongbokgung APP</h4>
 				<p>
 					<a  class="btn" href="#">
@@ -79,7 +79,7 @@ it implements function which can describe Cultural Heritage data using the camer
 				</p>
 			</div>
 			<div class="span4">
-				<img id="img_app2" src="../assets/img/go_icon_2.png" alt="">
+				<img id="img_app2" src="../../assets/img/go_icon_2.png" alt="">
 				<h4>Changdeokgung APP</h4>
 				<p>
 					<a class="btn" href="#">
@@ -93,7 +93,7 @@ it implements function which can describe Cultural Heritage data using the camer
 				</p>
 			</div>
 			<div class="span4">
-				<img id="img_app3" src="../assets/img/go_icon_3.png" alt="">
+				<img id="img_app3" src="../../assets/img/go_icon_3.png" alt="">
 				<h4>Jongmyo APP</h4>
 				<p>
 					<a class="btn" href="#">
@@ -129,26 +129,26 @@ it implements function which can describe Cultural Heritage data using the camer
 	    <!-- 자바스크립트
 	    ================================================== -->
 	    <!-- 페이지를 빨리 읽어들이도록 문서 마지막에 배치 -->
-	    <script src="../assets/js/bootstrap-transition.js"></script>
-	    <script src="../assets/js/bootstrap-carousel.js"></script>
-	  	<script src="../assets/js/bootstrap-dropdown.js"></script>
+	    <script src="../../assets/js/bootstrap-transition.js"></script>
+	    <script src="../../assets/js/bootstrap-carousel.js"></script>
+	  	<script src="../../assets/js/bootstrap-dropdown.js"></script>
 	 	
-	 	<script src="../assets/js/store_map.js"></script>
-		<script src="../assets/js/store_map2.js"></script>
+	 	<script src="../../assets/js/store_map.js"></script>
+		<script src="../../assets/js/store_map2.js"></script>
 		 
 	 <!--   ================================================== -->
 	  <!-- 아래의 js는 현재 필요가 없음(2014.06.10) -->
 	 	
 	 	<!-- <script src="../assets/js/jquery.js"></script>다른 버전 제이쿼리 사용중-->
-	 	<script src="../assets/js/bootstrap-alert.js"></script>
-	    <script src="../assets/js/bootstrap-modal.js"></script>
-	    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-	    <script src="../assets/js/bootstrap-tab.js"></script>
-	    <script src="../assets/js/bootstrap-tooltip.js"></script>
-	    <script src="../assets/js/bootstrap-popover.js"></script>
-	    <script src="../assets/js/bootstrap-button.js"></script>
-	    <script src="../assets/js/bootstrap-collapse.js"></script>
-	    <script src="../assets/js/bootstrap-typeahead.js"></script>
+	 	<script src="../../assets/js/bootstrap-alert.js"></script>
+	    <script src="../../assets/js/bootstrap-modal.js"></script>
+	    <script src="../../assets/js/bootstrap-scrollspy.js"></script>
+	    <script src="../../assets/js/bootstrap-tab.js"></script>
+	    <script src="../../assets/js/bootstrap-tooltip.js"></script>
+	    <script src="../../assets/js/bootstrap-popover.js"></script>
+	    <script src="../../assets/js/bootstrap-button.js"></script>
+	    <script src="../../assets/js/bootstrap-collapse.js"></script>
+	    <script src="../../assets/js/bootstrap-typeahead.js"></script>
 
 </body>
 </html>
