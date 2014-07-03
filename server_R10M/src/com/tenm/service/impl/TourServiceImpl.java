@@ -24,17 +24,23 @@ public class TourServiceImpl implements TourService {
 	/**데이타 프로퍼티 세팅*/
 	@Value("#{locationDetailKoProperties}") Map<String, String> locationDetailKoProperties;
 	@Value("#{locationDetailEnProperties}") Map<String, String> locationDetailEnProperties;
-	@Value("#{locationDetailJpProperties}") Map<String, String> locationDetailJpProperties;
+	@Value("#{locationDetailJaProperties}") Map<String, String> locationDetailJaProperties;
 	
 	@Value("#{locationNameEnProperties}") Map<String, String> locationNameEnProperties;
-	@Value("#{locationNameJpProperties}") Map<String, String> locationNameJpProperties;
+	@Value("#{locationNameJaProperties}") Map<String, String> locationNameJaProperties;
 	
 	@Value("#{beaconDetailKoProperties}") Map<String, String> beaconDetailKoProperties;
 	@Value("#{beaconDetailEnProperties}") Map<String, String> beaconDetailEnProperties;
-	@Value("#{beaconDetailJpProperties}") Map<String, String> beaconDetailJpProperties;
+	@Value("#{beaconDetailJaProperties}") Map<String, String> beaconDetailJaProperties;
 	
-	@Value("#{locationStreamingUrlProperties}") Map<String, String> locationStreamingUrlProperties;
-	@Value("#{beaconStreamingUrlProperties}") Map<String, String> beaconStreamingUrlProperties;
+	/**스트리밍 프로퍼티 세팅*/
+	@Value("#{locationStreamingUrlKoProperties}") Map<String, String> locationStreamingUrlKoProperties;
+	@Value("#{locationStreamingUrlEnProperties}") Map<String, String> locationStreamingUrlEnProperties;
+	@Value("#{locationStreamingUrlJaProperties}") Map<String, String> locationStreamingUrlJaProperties;
+	
+	@Value("#{beaconStreamingUrlKoProperties}") Map<String, String> beaconStreamingUrlKoProperties;
+	@Value("#{beaconStreamingUrlEnProperties}") Map<String, String> beaconStreamingUrlEnProperties;
+	@Value("#{beaconStreamingUrlJaProperties}") Map<String, String> beaconStreamingUrlJaProperties;
 
 	//constructor
 	public TourServiceImpl() {
@@ -65,11 +71,11 @@ public class TourServiceImpl implements TourService {
 	}
 	
 	/**일본어 로케이션 데이터 리스트*/
-	public List<LocationInfo> getLocationDataJpList(String areaName) {
+	public List<LocationInfo> getLocationDataJaList(String areaName) {
 		List<LocationInfo> locationList = tourDao.getLocationDataList(areaName);
 		for (int i = 0; i < locationList.size(); i++) {
-			locationList.get(i).setLocationName(locationNameJpProperties(locationList.get(i)));
-			locationList.get(i).setLocationDetail(locationDetailJpProperties(locationList.get(i)));
+			locationList.get(i).setLocationName(locationNameJaProperties(locationList.get(i)));
+			locationList.get(i).setLocationDetail(locationDetailJaProperties(locationList.get(i)));
 		}
 		return locationList;
 	}
@@ -103,41 +109,41 @@ public class TourServiceImpl implements TourService {
 	}
 	
 	/**일본어 비콘 지역정보*/
-	public Beacon getBeaconDataJp(Beacon beacon) {
+	public Beacon getBeaconDataJa(Beacon beacon) {
 		Beacon beaconInfo = tourDao.getBeaconRegion(beacon);
-		beaconInfo.setRegionName(beaconNameJpProperties(beaconInfo));
-		beaconInfo.setRegionDetail(beaconDetailJpProperties(beaconInfo));
+		beaconInfo.setRegionName(beaconNameJaProperties(beaconInfo));
+		beaconInfo.setRegionDetail(beaconDetailJaProperties(beaconInfo));
 		return beaconInfo;
 	}
 
 	/**한글 로케이션 스트리밍 서버 url*/
 	public String getLocationStremingUrlKo(String locationName){
-		return getLocationStreamingUrlProperties(locationName);
+		return getLocationStreamingUrlKoProperties(locationName);
 	}
 	
 	/**영문 로케이션 스트리밍 서버 url*/
 	public String getLocationStremingUrlEn(String locationName){
-		return getLocationStreamingUrlProperties(locationName);
+		return getLocationStreamingUrlEnProperties(locationName);
 	}
 	
 	/**일본어 로케이션 스트리밍 서버 url*/
-	public String getLocationStremingUrlJp(String locationName){
-		return getLocationStreamingUrlProperties(locationName);
+	public String getLocationStremingUrlJa(String locationName){
+		return getLocationStreamingUrlJaProperties(locationName);
 	}
 	
 	/**비콘 스트리밍 서버 url*/
 	public String getBeaconStremingUrlKo(String locationName){
-		return getBeaconStreamingUrlProperties(locationName);
+		return getBeaconStreamingUrlKoProperties(locationName);
 	}
 	
 	/**비콘 스트리밍 서버 url*/
 	public String getBeaconStremingUrlEn(String locationName){
-		return getBeaconStreamingUrlProperties(locationName);
+		return getBeaconStreamingUrlEnProperties(locationName);
 	}
 	
 	/**비콘 스트리밍 서버 url*/
-	public String getBeaconStremingUrlJp(String locationName){
-		return getBeaconStreamingUrlProperties(locationName);
+	public String getBeaconStremingUrlJa(String locationName){
+		return getBeaconStreamingUrlJaProperties(locationName);
 	}
 	
 	
@@ -157,12 +163,12 @@ public class TourServiceImpl implements TourService {
 		return (String)locationNameEnProperties.get(locationInfo.getLocationName());
 	}	
 	/**일본어 로케이션 데이터에 디테일 프로퍼티 주입*/
-	private String locationDetailJpProperties(LocationInfo locationInfo){
-		return (String)locationDetailJpProperties.get(locationInfo.getLocationName());
+	private String locationDetailJaProperties(LocationInfo locationInfo){
+		return (String)locationDetailJaProperties.get(locationInfo.getLocationName());
 	}	
 	/**일본어 로케이션 데이터에 네임 프로퍼티 주입*/
-	private String locationNameJpProperties(LocationInfo locationInfo){
-		return (String)locationNameJpProperties.get(locationInfo.getLocationName());
+	private String locationNameJaProperties(LocationInfo locationInfo){
+		return (String)locationNameJaProperties.get(locationInfo.getLocationName());
 	}
 	
 	//beacon properties method
@@ -180,22 +186,34 @@ public class TourServiceImpl implements TourService {
 	}
 	
 	/**일본어 비콘 데이터에 디테일 프로퍼티 주입*/
-	private String beaconDetailJpProperties(Beacon beacon){
-		return (String)beaconDetailJpProperties.get(beacon.getRegionName());
+	private String beaconDetailJaProperties(Beacon beacon){
+		return (String)beaconDetailJaProperties.get(beacon.getRegionName());
 	}
 	/**일본어 비콘 데이터에 네임 프로퍼티 주입*/
-	private String beaconNameJpProperties(Beacon beacon){
-		return (String)locationNameJpProperties.get(beacon.getRegionName());
+	private String beaconNameJaProperties(Beacon beacon){
+		return (String)locationNameJaProperties.get(beacon.getRegionName());
 	}
 	
 	//streaming properties method
 	/**location streaming url*/
-	private String getLocationStreamingUrlProperties(String locationName){
-		return (String)locationStreamingUrlProperties.get(locationName);
+	private String getLocationStreamingUrlKoProperties(String locationName){
+		return (String)locationStreamingUrlKoProperties.get(locationName);
+	}
+	private String getLocationStreamingUrlEnProperties(String locationName){
+		return (String)locationStreamingUrlEnProperties.get(locationName);
+	}
+	private String getLocationStreamingUrlJaProperties(String locationName){
+		return (String)locationStreamingUrlJaProperties.get(locationName);
 	}
 	/**beacon streaming url*/
-	private String getBeaconStreamingUrlProperties(String locationName){
-		return (String)beaconStreamingUrlProperties.get(locationName);
+	private String getBeaconStreamingUrlKoProperties(String locationName){
+		return (String)beaconStreamingUrlKoProperties.get(locationName);
+	}
+	private String getBeaconStreamingUrlEnProperties(String locationName){
+		return (String)beaconStreamingUrlEnProperties.get(locationName);
+	}
+	private String getBeaconStreamingUrlJaProperties(String locationName){
+		return (String)beaconStreamingUrlJaProperties.get(locationName);
 	}
 	
 	

@@ -57,19 +57,27 @@
 
 <util:properties id="locationDetailKoProperties" location="classpath:resources/locationDetailKo.properties"/>
 <util:properties id="locationDetailEnProperties" location="classpath:resources/locationDetailEn.properties"/>
-<util:properties id="locationDetailJpProperties" location="classpath:resources/locationDetailJp.properties"/>
+<util:properties id="locationDetailJaProperties" location="classpath:resources/locationDetailJa.properties"/>
 
 <util:properties id="locationNameEnProperties" location="classpath:resources/locationNameEn.properties"/>
-<util:properties id="locationNameJpProperties" location="classpath:resources/locationNameJp.properties"/>
+<util:properties id="locationNameJaProperties" location="classpath:resources/locationNameJa.properties"/>
 
 <util:properties id="beaconDetailKoProperties" location="classpath:resources/beaconDetailKo.properties"/>
 <util:properties id="beaconDetailEnProperties" location="classpath:resources/beaconDetailEn.properties"/>
-<util:properties id="beaconDetailJpProperties" location="classpath:resources/beaconDetailJp.properties"/>
+<util:properties id="beaconDetailJaProperties" location="classpath:resources/beaconDetailJa.properties"/>
 
-<util:properties id="locationStreamingUrlProperties" location="classpath:resources/locationStreamingUrl.properties"/>
-<util:properties id="beaconStreamingUrlProperties" location="classpath:resources/beaconStreamingUrl.properties"/>
+<util:properties id="locationStreamingUrlKoProperties" location="classpath:resources/locationStreamingUrlKo.properties"/>
+<util:properties id="locationStreamingUrlEnProperties" location="classpath:resources/locationStreamingUrlEn.properties"/>
+<util:properties id="locationStreamingUrlJaProperties" location="classpath:resources/locationStreamingUrlJa.properties"/>
+
+<util:properties id="beaconStreamingUrlKoProperties" location="classpath:resources/beaconStreamingUrlKo.properties"/>
+<util:properties id="beaconStreamingUrlEnProperties" location="classpath:resources/beaconStreamingUrlEn.properties"/>
+<util:properties id="beaconStreamingUrlJaProperties" location="classpath:resources/beaconStreamingUrlJa.properties"/>
 
 
-<context:component-scan base-package="com.tenm.service.impl"/>
+<context:component-scan base-package="com.tenm.service.impl">
+    <context:exclude-filter type="annotation"
+								expression="org.springframework.stereotype.Controller"/>
+</context:component-scan>
 
 </beans>

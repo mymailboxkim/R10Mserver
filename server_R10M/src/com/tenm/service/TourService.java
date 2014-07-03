@@ -12,7 +12,7 @@ public interface TourService {
 	
 	public List<LocationInfo> getLocationDataEnList(String areaName);
 	
-	public List<LocationInfo> getLocationDataJpList(String areaName);
+	public List<LocationInfo> getLocationDataJaList(String areaName);
 
 	public Map<String, LocationInfo> getLocationDataKoMap(String areaName);
 	
@@ -20,19 +20,19 @@ public interface TourService {
 	
 	public Beacon getBeaconDataEn(Beacon beacon);
 	
-	public Beacon getBeaconDataJp(Beacon beacon);
+	public Beacon getBeaconDataJa(Beacon beacon);
 	
 	public String getLocationStremingUrlKo(String locationName);
 	
 	public String getLocationStremingUrlEn(String locationName);
 	
-	public String getLocationStremingUrlJp(String locationName);
+	public String getLocationStremingUrlJa(String locationName);
 	
 	public String getBeaconStremingUrlKo(String locationName);
 	
 	public String getBeaconStremingUrlEn(String locationName);
 	
-	public String getBeaconStremingUrlJp(String locationName);
+	public String getBeaconStremingUrlJa(String locationName);
 	
 
 }

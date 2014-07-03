@@ -30,8 +30,8 @@ public class test {
 		beacon.setUuid("8492e75f-4fd6-469d-b132-043fe94921d8");
 		beacon.setMajor(11);
 		beacon.setMinor(11001);
-		System.out.println(tourService.getBeaconDataKr(beacon));
-		System.out.println(tourService.getBeaconDataEng(beacon));
+		System.out.println(tourService.getBeaconDataKo(beacon));
+		System.out.println(tourService.getBeaconDataEn(beacon));
 	}
 	
 	//@Test

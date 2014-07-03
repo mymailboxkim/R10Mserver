@@ -1,5 +1,7 @@
 package com.tenm.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -29,7 +31,12 @@ public class TourLocationController {
 	public void jsonLocationDataKoController
 				(@PathVariable String areaName, Model model){
 		System.out.println("==========JSON KO request==========");
-		model.addAttribute(areaName, tourService.getLocationDataKoList(areaName));
+		List locationData = tourService.getLocationDataKoList(areaName);
+		if( !(locationData.isEmpty()) ){
+			model.addAttribute(areaName, tourService.getLocationDataKoList(areaName));
+		}else{
+			throw new NullPointerException();
+		}
 	}
 	
 	/**영문 로케이션데이터 컨트롤러*/
@@ -42,12 +49,12 @@ public class TourLocationController {
 	}
 	
 	/**일본어 로케이션데이터 컨트롤러*/
-//	http://192.168.200.93:8080/app/location/jp/경복궁.json
-	@RequestMapping(value="/jp/{areaName}", method=RequestMethod.GET)
-	public void jsonLocationDataJpController
+//	http://192.168.200.93:8080/app/location/ja/경복궁.json
+	@RequestMapping(value="/ja/{areaName}", method=RequestMethod.GET)
+	public void jsonLocationDataJaController
 				(@PathVariable String areaName, Model model){
-		System.out.println("==========JSON JP request==========");
-		model.addAttribute(areaName, tourService.getLocationDataJpList(areaName));
+		System.out.println("==========JSON JA request==========");
+		model.addAttribute(areaName, tourService.getLocationDataJaList(areaName));
 	}
 	
 	/**한글 로케이션데이터 맵 컨트롤러*/
@@ -70,27 +77,27 @@ public class TourLocationController {
 				(@PathVariable String locationName, Model model){
 		System.out.println("==========LOCATION VIDEO KO request==========");
 		model.addAttribute("videoUrl", tourService.getLocationStremingUrlKo(locationName));
-		//return "redirect:/"+tourService.getBeaconStremingUrlKr(locationName);
+		//return "redirect:/"+tourService.getBeaconStremingUrlKo(locationName);
 	}
 	
 	/**영문 로케이션 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
-	@RequestMapping(value="/video/En/{locationName}")
+	@RequestMapping(value="/video/en/{locationName}")
 	public void locationVideoEnController
 				(@PathVariable String locationName, Model model){
 		System.out.println("==========LOCATION VIDEO EN request==========");
 		model.addAttribute("videoUrl", tourService.getLocationStremingUrlEn(locationName));
-		//return "redirect:/"+tourService.getLocationStremingUrlEng(locationName);
+		//return "redirect:/"+tourService.getLocationStremingUrlEn(locationName);
 	}
 	
 	/**일본어 로케이션 영상 스트리밍 컨트롤러*/
 //	호스팅 서버 이용
-	@RequestMapping(value="/video/jp/{locationName}")
-	public void locationVideoJpController
+	@RequestMapping(value="/video/ja/{locationName}")
+	public void locationVideoJaController
 				(@PathVariable String locationName, Model model){
-		System.out.println("==========LOCATION VIDEO JP request==========");
-		model.addAttribute("videoUrl", tourService.getLocationStremingUrlJp(locationName));
-		//return "redirect:/"+tourService.getLocationStremingUrlJp(locationName);
+		System.out.println("==========LOCATION VIDEO JA request==========");
+		model.addAttribute("videoUrl", tourService.getLocationStremingUrlJa(locationName));
+		//return "redirect:/"+tourService.getLocationStremingUrlJa(locationName);
 	}
 
 }
