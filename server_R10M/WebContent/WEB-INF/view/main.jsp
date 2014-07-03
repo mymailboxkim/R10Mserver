@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 	<meta charset="EUC-KR">
 
-    <title>고궁 웹 ver.1.8</title>
+    <title>GO!Gung!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
