@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 	<meta charset="EUC-KR">
-	
+   
     <title>고궁 웹 ver.1.8</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -17,18 +17,15 @@
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
     
   	<link href="../assets/css/gogung_main.css" rel="stylesheet">
-  	<link href="../assets/css/gogung_store.css" rel="stylesheet">
+  	<link href="../assets/css/gogung_content.css" rel="stylesheet">
   	<link href="../assets/css/gogung_footer.css" rel="stylesheet">
   	
-
-	<script src="../assets/js/jquery-1.11.1.js"></script>
-	
-	<script src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=61604f5e63e27eaec6c71f60526f61ef"></script>
-	 
-	 
+  	
+  	<link href="../assets/css/gogung_about.css" rel="stylesheet">
+  	
 </head>
 <body>
-		<div class="container">
+	<div class="container">
 	
 	      <div class="logoimg">
 	        <image src="../assets/img/go_icon_bg.png" alt="logoimg">
@@ -38,91 +35,72 @@
 	      <div class="navbar">
 	          <div class="container">
 	            <ul class="nav">
-	              <li><a href="/gogoong/main.do">HOME</a></li>
-	              <li><a href="/gogoong/aboutus.do">ABOUT</a></li>
-	              <li><a href="/gogoong/store.do">STORE</a></li>
+	              <li><a href="/gogoong/app/main_m.do">HOME</a></li>
+	              <li><a href="/gogoong/app/aboutus_m.do">ABOUT</a></li>
+	              <li><a href="/gogoong/app/store_m.do">STORE</a></li>
 	              <li class="dropdown">
 	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICE</a>
 	                  <ul class="dropdown-menu">
-	                    <li><a href="/gogoong/faq.do">FAQ</a></li>
-	                    <li><a href="/gogoong/contactus.do">CONTACT US(e-mail)</a></li>
+	                    <li><a href="/gogoong/app/faq_m.do">FAQ</a></li>
+	                    <li><a href="/gogoong/app/contactus_m.do">CONTACT US(e-mail)</a></li>
 	                    </ul>
 	                </li>
 	            </ul>
 	          </div>
 	      </div><!-- /.navbar -->
 	     
-	  <!-- 스토어 부분 -->  
-	    <hr>
-	    
-		<div class="hero-unit">  
+	    <!-- about US 시작 부분 -->
+	 	<hr>
+	 	<div class="about">
+			<div class="about_title" >
+			<img alt="" src="../assets/img/title.jpg">
+					<h2>About</h2><h2 style="color: white; left: 62%"> Us</h2>
+			</div><br><br>
 			
-			<p>Gogung is a Cultural Heritage Tour guide system which provides with information and augmented reality guidance system.
-it implements function which can describe Cultural Heritage data using the camera view and the almost same explanation told by the local guide.
-			</p>
+			<div class="comlogo">
+				<img alt="" src="../assets/img/picture6.png" >
+				<p>10M.com</p>
+			</div>
+			<div class="tex">
+			
+					<h4>Excellence in the traditional Korean palaces with 10M </h4><br>
+					10M is the software programming project team. We have released the guide-application 
+					which was based on four months of our effort for Gyeongbokgung and 
+					the historic sites of Korea.<br>
+					The augmented reality technology the application has will make 
+					your travel more comfortable.<br><br>
+					Our application provides all information of them in Gyeongbokgung for the travelers
+					within 10 meter radius. we are going to release  more guide-applications 
+					to the market in future and try to be the best in the nation's 
+					tourism sector. 
+					<br><br>
+					<hr>
+						 <h4>Information about 10M </h4><br>
+				<h6>Java 47th</h6><br>
+				
+				<h6>Team leader</h6>  Jang hee jun<br>
+				<h6>Team member</h6> Kim sang hwa, Lee dong chul, Kim hyo jin, Nam kwon woo, lee min ho, Jo woo yeon<br><br>
+				
+				Location: Bitacademy  (Gangnam)137-070 Seocho-dong, Seocho-gu, Seoul, Korea<br> 
+				Tel: 02-3486-4600  Fax: 02-6007-1245  Mobile: 011-1234-1234  E-mail: hjjang@bitacademy.net
+				
 		</div>
-		
-		
-		<div class="row">
-			<div class="span4">
-				<img id="img_app1" src="../assets/img/go_icon.png" alt="">
-				<h4>Gyeongbokgung APP</h4>
-				<p>
-					<a  class="btn" href="#">
-					download
-					<span class="en-font-family"></span>
-					</a>
-					<a id="button1" class="btn">
-					location
-					<span class="en-font-family"></span>
-					</a>
-				</p>
-			</div>
-			<div class="span4">
-				<img id="img_app2" src="../assets/img/go_icon_2.png" alt="">
-				<h4>Changdeokgung APP</h4>
-				<p>
-					<a class="btn" href="#">
-					download
-					<span class="en-font-family"></span>
-					</a>
-					<a id="button2" class="btn">
-					location
-					<span class="en-font-family"></span>
-					</a>
-				</p>
-			</div>
-			<div class="span4">
-				<img id="img_app3" src="../assets/img/go_icon_3.png" alt="">
-				<h4>Jongmyo APP</h4>
-				<p>
-					<a class="btn" href="#">
-					download
-					<span class="en-font-family"></span>
-					</a>
-					<a id="button3" class="btn">
-					location
-					<span class="en-font-family"></span>
-					</a>
-				</p>
-			</div>
 		</div>
-	   
-	   <div id="asd" style="width:550px; margin-left:inherit;">
-	   	<div id = "naverMap" 
-
-	   	style="border:1px solid #000; 
-	   	width:700px; 
-	   	height:400px; 
-	   	margin:20px; 
-	   	display:block;"></div>
-	   	
-	</div>
 	
+	<br>
+	<br>
 	
-	      <div class="footer" >
-	       	<p align="left" style="margin-bottom: 0px; padding-top: 5px; padding-left: 10px;">&copy; 2014 / cooperation.10M</p> 
-	      </div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	    <div class="footer" >
+	      <p align="left" style="margin-bottom: 0px; padding-top: 5px; padding-left: 10px;">&copy; 2014 / cooperation.10M</p> 
+	    </div>
 	
 	 </div> <!-- /container -->
 	
@@ -133,9 +111,7 @@ it implements function which can describe Cultural Heritage data using the camer
 	    <script src="../assets/js/bootstrap-carousel.js"></script>
 	  	<script src="../assets/js/bootstrap-dropdown.js"></script>
 	 	
-	 	<script src="../assets/js/store_map.js"></script>
-		<script src="../assets/js/store_map2.js"></script>
-		 
+	 	
 	 <!--   ================================================== -->
 	  <!-- 아래의 js는 현재 필요가 없음(2014.06.10) -->
 	 	
@@ -149,6 +125,6 @@ it implements function which can describe Cultural Heritage data using the camer
 	    <script src="../assets/js/bootstrap-button.js"></script>
 	    <script src="../assets/js/bootstrap-collapse.js"></script>
 	    <script src="../assets/js/bootstrap-typeahead.js"></script>
-
+	
 </body>
 </html>

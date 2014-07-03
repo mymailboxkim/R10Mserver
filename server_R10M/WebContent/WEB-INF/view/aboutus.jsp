@@ -6,36 +6,36 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 	<meta charset="EUC-KR">
    
-    <title>고궁 웹 ver.1.7</title>
+    <title>고궁 웹 ver.1.8</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     
     <!-- 스타일 -->
    
-    <link href="../../assets/css/bootstrap-ko.css" rel="stylesheet">
-    <link href="../../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-ko.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
     
-  	<link href="../../assets/css/gogung_main.css" rel="stylesheet">
-  	<link href="../../assets/css/gogung_content.css" rel="stylesheet">
-  	<link href="../../assets/css/gogung_footer.css" rel="stylesheet">
+  	<link href="../assets/css/gogung_main.css" rel="stylesheet">
+  	<link href="../assets/css/gogung_content.css" rel="stylesheet">
+  	<link href="../assets/css/gogung_footer.css" rel="stylesheet">
   	
   	
-  	<link href="../../assets/css/gogung_about.css" rel="stylesheet">
+  	<link href="../assets/css/gogung_about.css" rel="stylesheet">
   	
 </head>
 <body>
 	<div class="container">
 	
 	      <div class="logoimg">
-	        <image src="../../assets/img/go_icon_bg.png" alt="logoimg">
+	        <image src="../assets/img/go_icon_bg.png" alt="logoimg">
 	        <p class="logo">10M.com</p>
 	      </div>
 	
 	      <div class="navbar">
 	          <div class="container">
 	            <ul class="nav">
-	            <li><a href="/gogoong/main.do">HOME</a></li>
+	              <li><a href="/gogoong/main.do">HOME</a></li>
 	              <li><a href="/gogoong/aboutus.do">ABOUT</a></li>
 	              <li><a href="/gogoong/store.do">STORE</a></li>
 	              <li class="dropdown">
@@ -53,12 +53,12 @@
 	 	<hr>
 	 	<div class="about">
 			<div class="about_title" >
-			<img alt="" src="../../assets/img/title.jpg">
+			<img alt="" src="../assets/img/title.jpg">
 					<h2>About</h2><h2 style="color: white; left: 62%"> Us</h2>
 			</div><br><br>
-		
+			
 			<div class="comlogo">
-				<img alt="" src="../../assets/img/picture6.png" >
+				<img alt="" src="../assets/img/picture6.png" >
 				<p>10M.com</p>
 			</div>
 			<div class="tex">
@@ -107,24 +107,24 @@
 	    <!-- 자바스크립트
 	    ================================================== -->
 	    <!-- 페이지를 빨리 읽어들이도록 문서 마지막에 배치 -->
-	    <script src="../../assets/js/bootstrap-transition.js"></script>
-	    <script src="../../assets/js/bootstrap-carousel.js"></script>
-	  	<script src="../../assets/js/bootstrap-dropdown.js"></script>
+	    <script src="../assets/js/bootstrap-transition.js"></script>
+	    <script src="../assets/js/bootstrap-carousel.js"></script>
+	  	<script src="../assets/js/bootstrap-dropdown.js"></script>
 	 	
 	 	
 	 <!--   ================================================== -->
 	  <!-- 아래의 js는 현재 필요가 없음(2014.06.10) -->
 	 	
 	 	<!-- <script src="../assets/js/jquery.js"></script>다른 버전 제이쿼리 사용중-->
-	 	<script src="../../assets/js/bootstrap-alert.js"></script>
-	    <script src="../../assets/js/bootstrap-modal.js"></script>
-	    <script src="../../assets/js/bootstrap-scrollspy.js"></script>
-	    <script src="../../assets/js/bootstrap-tab.js"></script>
-	    <script src="../../assets/js/bootstrap-tooltip.js"></script>
-	    <script src="../../assets/js/bootstrap-popover.js"></script>
-	    <script src="../../assets/js/bootstrap-button.js"></script>
-	    <script src="../../assets/js/bootstrap-collapse.js"></script>
-	    <script src="../../assets/js/bootstrap-typeahead.js"></script>
+	 	<script src="../assets/js/bootstrap-alert.js"></script>
+	    <script src="../assets/js/bootstrap-modal.js"></script>
+	    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+	    <script src="../assets/js/bootstrap-tab.js"></script>
+	    <script src="../assets/js/bootstrap-tooltip.js"></script>
+	    <script src="../assets/js/bootstrap-popover.js"></script>
+	    <script src="../assets/js/bootstrap-button.js"></script>
+	    <script src="../assets/js/bootstrap-collapse.js"></script>
+	    <script src="../assets/js/bootstrap-typeahead.js"></script>
 	
 </body>
 </html>

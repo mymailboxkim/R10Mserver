@@ -23,7 +23,7 @@
 
 	<script src="../assets/js/jquery-1.11.1.js"></script>
 	
-	<script src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=61604f5e63e27eaec6c71f60526f61ef"></script>
+	<script src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=d1e2a658e5102ec7ea5725ad04fb1fde"></script>
 	 
 	 
 </head>
@@ -38,14 +38,14 @@
 	      <div class="navbar">
 	          <div class="container">
 	            <ul class="nav">
-	              <li><a href="/gogoong/main.do">HOME</a></li>
-	              <li><a href="/gogoong/aboutus.do">ABOUT</a></li>
-	              <li><a href="/gogoong/store.do">STORE</a></li>
+	              <li><a href="/gogoong/app/main_m.do">HOME</a></li>
+	              <li><a href="/gogoong/app/aboutus_m.do">ABOUT</a></li>
+	              <li><a href="/gogoong/app/store_m.do">STORE</a></li>
 	              <li class="dropdown">
 	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICE</a>
 	                  <ul class="dropdown-menu">
-	                    <li><a href="/gogoong/faq.do">FAQ</a></li>
-	                    <li><a href="/gogoong/contactus.do">CONTACT US(e-mail)</a></li>
+	                    <li><a href="/gogoong/app/faq_m.do">FAQ</a></li>
+	                    <li><a href="/gogoong/app/contactus_m.do">CONTACT US(e-mail)</a></li>
 	                    </ul>
 	                </li>
 	            </ul>
