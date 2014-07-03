@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/gogoong")
-public class TourWebController {
+@RequestMapping("/gogoong/app")
+public class TourWebMobileController {
 
-	public TourWebController() {
-		System.out.println("========== TourWebController Constructor ==========");
+	public TourWebMobileController() {
+		System.out.println("========== TourWebMobileController Constructor ==========");
 	}
 	
 //	http://192.168.200.93:8080/gogoong/main.do
