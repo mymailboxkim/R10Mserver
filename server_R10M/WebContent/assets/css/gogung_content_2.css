@@ -3,7 +3,7 @@
         /* Animation Canvas */
         .animation_canvas  {
             position:relative;
-			width:400px;
+			width:40%;
 			height:203px;
 			overflow:hidden;
 			float:left; 

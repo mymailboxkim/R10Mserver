@@ -5,10 +5,11 @@
 	height:240px;
 }
 
-
 .hero-unit p{
-	margin: 150px 0 0 80px;
-	font-weight: bold;
+   margin: 130px 0 0 80px;
+   font-weight: bold;
+   font-family: Bodoni MT;
+   font-size: 16pt;
 }
 
 .row{
@@ -35,9 +36,9 @@
 	padding-right: 10px;
 }
 
-/* .asd{
+ .asd{
 	width: 600px;
 	margin-left:inherit;
-} */
+} 
 
  
