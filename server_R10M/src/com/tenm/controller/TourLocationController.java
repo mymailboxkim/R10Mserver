@@ -31,12 +31,7 @@ public class TourLocationController {
 	public void jsonLocationDataKoController
 				(@PathVariable String areaName, Model model){
 		System.out.println("==========JSON KO request==========");
-		List locationData = tourService.getLocationDataKoList(areaName);
-		if( !(locationData.isEmpty()) ){
-			model.addAttribute(areaName, tourService.getLocationDataKoList(areaName));
-		}else{
-			throw new NullPointerException();
-		}
+		model.addAttribute(areaName, tourService.getLocationDataKoList(areaName));
 	}
 	
 	/**영문 로케이션데이터 컨트롤러*/
