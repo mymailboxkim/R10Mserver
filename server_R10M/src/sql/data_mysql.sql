@@ -44,7 +44,7 @@ VALUES (null, 'manager13', '집옥재', '37.583434', '126.97609', '0', '경복�
 /* Test Data 정보*/
 
 INSERT INTO LOCAL_INFO (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
-VALUES (null, 'manager1', '강남역', '37.576037','127.027621', '0', 'test');
+VALUES (null, 'manager1', '강남역', '37.497942','127.027621', '0', 'test');
 
 INSERT INTO LOCAL_INFO (local_no, manager_id, local_name, latitude, longitude, altitude, area_name)
 VALUES (null, 'manager2', '신논현역', '37.504724','127.02538', '0', 'test');
